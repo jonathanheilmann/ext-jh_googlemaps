@@ -47,14 +47,6 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $title = '';
 
 	/**
-	 * [DEPRECATED] Readable address of location (please use more detailed fields
-	 * below)
-	 *
-	 * @var string
-	 */
-	protected $address = '';
-
-	/**
 	 * Street
 	 *
 	 * @var string
@@ -69,18 +61,18 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $streetNumber = '';
 
 	/**
-	 * City
-	 *
-	 * @var string
-	 */
-	protected $city = '';
-
-	/**
 	 * Postal code
 	 *
 	 * @var string
 	 */
 	protected $postalCode = '';
+
+	/**
+	 * City
+	 *
+	 * @var string
+	 */
+	protected $city = '';
 
 	/**
 	 * Country
@@ -231,25 +223,6 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setTeaser($teaser) {
 		$this->teaser = $teaser;
-	}
-
-	/**
-	 * Returns the address
-	 *
-	 * @return string $address
-	 */
-	public function getAddress() {
-		return $this->address;
-	}
-
-	/**
-	 * Sets the address
-	 *
-	 * @param string $address
-	 * @return void
-	 */
-	public function setAddress($address) {
-		$this->address = $address;
 	}
 
 	/**
