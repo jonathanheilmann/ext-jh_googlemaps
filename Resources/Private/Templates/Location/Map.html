@@ -65,7 +65,7 @@
 								<f:format.crop maxCharacters="30" append="...">{location.description->f:format.html()}</f:format.crop>
 							</f:else>
 						</f:if>
-						<f:if condition="{location.address}"><p>{location.address->f:format.nl2br()}</p></f:if>
+						<p><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></p>
 						<f:link.action action="map" arguments="{selectedLocation: location}" section="{location.uid}">[mehr]</f:link.action>
 					'</jh:format.trim>);
 					infowindow.open(map, marker_{location.uid});

@@ -97,6 +97,121 @@ class LocationTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
+	public function getStreetReturnsInitialValueForString() {
+		$this->assertSame(
+			'',
+			$this->subject->getStreet()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setStreetForStringSetsStreet() {
+		$this->subject->setStreet('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'street',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getStreetNumberReturnsInitialValueForString() {
+		$this->assertSame(
+			'',
+			$this->subject->getStreetNumber()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setStreetNumberForStringSetsStreetNumber() {
+		$this->subject->setStreetNumber('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'streetNumber',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getPostalCodeReturnsInitialValueForString() {
+		$this->assertSame(
+			'',
+			$this->subject->getPostalCode()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setPostalCodeForStringSetsPostalCode() {
+		$this->subject->setPostalCode('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'postalCode',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getCityReturnsInitialValueForString() {
+		$this->assertSame(
+			'',
+			$this->subject->getCity()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setCityForStringSetsCity() {
+		$this->subject->setCity('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'city',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getCountryReturnsInitialValueForString() {
+		$this->assertSame(
+			'',
+			$this->subject->getCountry()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setCountryForStringSetsCountry() {
+		$this->subject->setCountry('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'country',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
 	public function getLatLngReturnsInitialValueForString() {
 		$this->assertSame(
 			'',
@@ -159,29 +274,6 @@ class LocationTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 		$this->assertAttributeEquals(
 			'Conceived at T3CON10',
 			'description',
-			$this->subject
-		);
-	}
-
-	/**
-	 * @test
-	 */
-	public function getPostalCodeReturnsInitialValueForInteger() {
-		$this->assertSame(
-			0,
-			$this->subject->getPostalCode()
-		);
-	}
-
-	/**
-	 * @test
-	 */
-	public function setPostalCodeForIntegerSetsPostalCode() {
-		$this->subject->setPostalCode(12);
-
-		$this->assertAttributeEquals(
-			12,
-			'postalCode',
 			$this->subject
 		);
 	}

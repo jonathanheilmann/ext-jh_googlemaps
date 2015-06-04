@@ -2,15 +2,13 @@
 
 <h2>{location.title}</h2>
 
-<f:if condition="{location.address}">
-	<p>
-		<b>{location.address->f:format.nl2br()}</b>
-		<br/>
-		<a href="{jh:googleMapsLink(coordinates: location.latLng, description: location.title)}" target="new">
-			<f:translate key="map.displayInGoogleMaps" />
-		</a>
-	</p>
-</f:if>
+<p>
+	<b><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></b>
+	<br/>
+	<a href="{jh:googleMapsLink(coordinates: location.latLng, description: location.title)}" target="new">
+		<f:translate key="map.displayInGoogleMaps" />
+	</a>
+</p>
 <f:if condition="{location.description}">
 	{location.description->f:format.html()}
 </f:if>

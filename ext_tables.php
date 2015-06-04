@@ -38,7 +38,7 @@ $GLOBALS['TCA']['tx_jhgooglemaps_domain_model_location'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'title,address,lat_lng,teaser,description,postal_code,marker,',
+		'searchFields' => 'title,address,street,street_number,postal_code,city,country,lat_lng,teaser,description,marker,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Location.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_jhgooglemaps_domain_model_location.gif'
 	),
