@@ -2,6 +2,7 @@
 namespace Heilmann\JhGooglemaps\Controller;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 /***************************************************************
  *
  *  Copyright notice
@@ -83,6 +84,9 @@ class LocationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 			$categories[] = $this->categoryRepository->findByUid($uid);
 		}
 		$locations = $this->locationRepository->findWithCategories($categories);
+		if (count($locations) == 0) {
+			$this->addFlashMessage(LocalizationUtility::translate('map.noLocations', $this->extensionName), '', \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR, TRUE);
+		}
 		$this->view->assign('locations', $locations);
 		//TODO: get selected location from url (permalink-enabled)
 		if ($selectedLocation != NULL) {
@@ -113,6 +117,9 @@ class LocationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 			$categories[] = $this->categoryRepository->findByUid($uid);
 		}
 		$locations = $this->locationRepository->findWithCategories($categories);
+		if (count($locations) == 0) {
+			$this->addFlashMessage(LocalizationUtility::translate('map.noLocations', $this->extensionName), '', \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR, TRUE);
+		}
 		$this->view->assign('locations', $locations);
 		if ($selectedLocation != NULL) {
 			$this->view->assign('selectedLocation', $selectedLocation);

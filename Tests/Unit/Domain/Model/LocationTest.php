@@ -74,29 +74,6 @@ class LocationTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function getAddressReturnsInitialValueForString() {
-		$this->assertSame(
-			'',
-			$this->subject->getAddress()
-		);
-	}
-
-	/**
-	 * @test
-	 */
-	public function setAddressForStringSetsAddress() {
-		$this->subject->setAddress('Conceived at T3CON10');
-
-		$this->assertAttributeEquals(
-			'Conceived at T3CON10',
-			'address',
-			$this->subject
-		);
-	}
-
-	/**
-	 * @test
-	 */
 	public function getStreetReturnsInitialValueForString() {
 		$this->assertSame(
 			'',

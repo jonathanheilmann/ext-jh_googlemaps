@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-04T20:35:51Z" product-name="jh_googlemaps">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-04T20:59:29Z" product-name="jh_googlemaps">
 		<header/>
 		<body>
 			<trans-unit id="title.description">
 				<source>Title of location</source>
-			</trans-unit>
-			<trans-unit id="address.description">
-				<source>Readable address of location</source>
 			</trans-unit>
 			<trans-unit id="street.description">
 				<source>Street</source>
@@ -35,6 +32,9 @@
 			</trans-unit>
 			<trans-unit id="marker.description">
 				<source>Marker of location</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>Readable address of location</source>
 			</trans-unit>
 		</body>
 	</file>
