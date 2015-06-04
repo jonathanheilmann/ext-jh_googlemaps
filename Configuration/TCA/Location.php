@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $GLOBALS['TCA']['tx_jhgooglemaps_domain_model_location'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_jhgooglemaps_domain_model_location']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, address, lat_lng, teaser, description, postal_code, marker',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, address, street, street_number, postal_code, city, country, lat_lng, teaser, description, marker',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, address, lat_lng, teaser, description;;;richtext:rte_transform[mode=ts_links], postal_code, marker, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, address, street, street_number, postal_code, city, country, lat_lng, teaser, description;;;richtext:rte_transform[mode=ts_links], marker, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -116,6 +116,51 @@ $GLOBALS['TCA']['tx_jhgooglemaps_domain_model_location'] = array(
 				'eval' => 'trim'
 			)
 		),
+		'street' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:jh_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_jhgooglemaps_domain_model_location.street',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'street_number' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:jh_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_jhgooglemaps_domain_model_location.street_number',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'postal_code' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:jh_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_jhgooglemaps_domain_model_location.postal_code',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'city' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:jh_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_jhgooglemaps_domain_model_location.city',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'country' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:jh_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_jhgooglemaps_domain_model_location.country',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
 		'lat_lng' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:jh_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_jhgooglemaps_domain_model_location.lat_lng',
@@ -154,15 +199,6 @@ $GLOBALS['TCA']['tx_jhgooglemaps_domain_model_location'] = array(
 					)
 				)
 			),
-		),
-		'postal_code' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:jh_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_jhgooglemaps_domain_model_location.postal_code',
-			'config' => array(
-				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			)
 		),
 		'marker' => array(
 			'exclude' => 1,

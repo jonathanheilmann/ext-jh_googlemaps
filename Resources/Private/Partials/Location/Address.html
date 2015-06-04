@@ -1,0 +1,14 @@
+<f:if condition="{location.street}">{location.street} {location.streetNumber}</f:if>
+<f:if condition="{location.postalCode}">
+	<f:if condition="{location.city}">
+		<f:then>
+			<br/>{location.postalCode} {location.city}
+		</f:then>
+		<f:else>
+			<br/>{location.postalCode}
+		</f:else>
+	</f:if>
+</f:if>
+<f:if condition="location.country">
+	<br/>{location.country}
+</f:if>

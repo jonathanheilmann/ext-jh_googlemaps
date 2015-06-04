@@ -3,8 +3,8 @@
         {
             "config": {
                 "position": [
-                    169,
-                    8
+                    20,
+                    40
                 ]
             },
             "name": "New Model Object",
@@ -48,12 +48,62 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "Readable address of location",
+                            "propertyDescription": "[DEPRECATED] Readable address of location (please use more detailed fields below)",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
                             "propertyName": "address",
                             "propertyType": "Text",
                             "uid": "261302886810"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Street",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "street",
+                            "propertyType": "String",
+                            "uid": "499672507407"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Street number",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "streetNumber",
+                            "propertyType": "String",
+                            "uid": "1282337584286"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Postal code",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "postalCode",
+                            "propertyType": "String",
+                            "uid": "599174274405"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "City",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "city",
+                            "propertyType": "String",
+                            "uid": "683795452605"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Country",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "country",
+                            "propertyType": "String",
+                            "uid": "1142271909195"
                         },
                         {
                             "allowedFileTypes": "",
@@ -84,16 +134,6 @@
                             "propertyName": "description",
                             "propertyType": "RichText",
                             "uid": "731234380006"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "Postal Code used for sorting.",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "postalCode",
-                            "propertyType": "Integer",
-                            "uid": "599174274405"
                         }
                     ]
                 },
@@ -116,8 +156,8 @@
         {
             "config": {
                 "position": [
-                    470,
-                    44
+                    261,
+                    41
                 ]
             },
             "name": "New Model Object",
@@ -234,9 +274,9 @@
             "disableLocalization": false,
             "disableVersioning": false,
             "sourceLanguage": "en",
-            "state": "alpha",
+            "state": "beta",
             "targetVersion": "6.2",
-            "version": "0.0.0"
+            "version": "0.2.0-dev"
         },
         "extensionKey": "jh_googlemaps",
         "name": "Google Maps",
@@ -277,7 +317,7 @@
         }
     ],
     "log": {
-        "last_modified": "2015-05-18 06:31",
+        "last_modified": "2015-06-04 08:35",
         "extension_builder_version": "6.2.0",
         "be_user": "Jonathan Heilmann (1)"
     }

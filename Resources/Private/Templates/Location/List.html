@@ -15,15 +15,13 @@
 					<h2>{location.title}</h2>
 					<f:if condition="{0: location} == {0: selectedLocation}">
 						<f:then>
-							<f:if condition="{location.address}">
-								<p>
-									<b>{location.address->f:format.nl2br()}</b>
-									<br/>
-									<a href="{jh:googleMapsLink(coordinates: location.latLng, description: location.title)}" target="new">
-										<f:translate key="map.displayInGoogleMaps" />
-									</a>
-								</p>
-							</f:if>
+							<p>
+								<b><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></b>
+								<br/>
+								<a href="{jh:googleMapsLink(coordinates: location.latLng, description: location.title)}" target="new">
+									<f:translate key="map.displayInGoogleMaps" />
+								</a>
+							</p>
 							<f:if condition="{location.teaser}">
 								<p>
 									<b>{location.teaser->f:format.nl2br()}</b>
@@ -35,7 +33,7 @@
 							<f:link.action action="list">[weniger]</f:link.action>
 						</f:then>
 						<f:else>
-							<f:if condition="{location.address}"><p>{location.address->f:format.nl2br()}</p></f:if>
+							<p><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></p>
 							<f:if condition="{location.teaser}">
 								<f:then>
 									<p>{location.teaser->f:format.nl2br()}</p>

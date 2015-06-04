@@ -47,11 +47,47 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $title = '';
 
 	/**
-	 * Readable address of location
+	 * [DEPRECATED] Readable address of location (please use more detailed fields
+	 * below)
 	 *
 	 * @var string
 	 */
 	protected $address = '';
+
+	/**
+	 * Street
+	 *
+	 * @var string
+	 */
+	protected $street = '';
+
+	/**
+	 * Street number
+	 *
+	 * @var string
+	 */
+	protected $streetNumber = '';
+
+	/**
+	 * City
+	 *
+	 * @var string
+	 */
+	protected $city = '';
+
+	/**
+	 * Postal code
+	 *
+	 * @var string
+	 */
+	protected $postalCode = '';
+
+	/**
+	 * Country
+	 *
+	 * @var string
+	 */
+	protected $country = '';
 
 	/**
 	 * Latitude,Lontitude
@@ -81,13 +117,6 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \Heilmann\JhGooglemaps\Domain\Model\Marker
 	 */
 	protected $marker = NULL;
-
-	/**
-	 * Postal Code used for sorting.
-	 *
-	 * @var integer
-	 */
-	protected $postalCode = 0;
 
 	/**
 	 * Returns the title
@@ -243,9 +272,85 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
+	 * Returns the street
+	 *
+	 * @return string $street
+	 */
+	public function getStreet() {
+		return $this->street;
+	}
+
+	/**
+	 * Sets the street
+	 *
+	 * @param string $street
+	 * @return void
+	 */
+	public function setStreet($street) {
+		$this->street = $street;
+	}
+
+	/**
+	 * Returns the streetNumber
+	 *
+	 * @return string $streetNumber
+	 */
+	public function getStreetNumber() {
+		return $this->streetNumber;
+	}
+
+	/**
+	 * Sets the streetNumber
+	 *
+	 * @param string $streetNumber
+	 * @return void
+	 */
+	public function setStreetNumber($streetNumber) {
+		$this->streetNumber = $streetNumber;
+	}
+
+	/**
+	 * Returns the city
+	 *
+	 * @return string $city
+	 */
+	public function getCity() {
+		return $this->city;
+	}
+
+	/**
+	 * Sets the city
+	 *
+	 * @param string $city
+	 * @return void
+	 */
+	public function setCity($city) {
+		$this->city = $city;
+	}
+
+	/**
+	 * Returns the country
+	 *
+	 * @return string $country
+	 */
+	public function getCountry() {
+		return $this->country;
+	}
+
+	/**
+	 * Sets the country
+	 *
+	 * @param string $country
+	 * @return void
+	 */
+	public function setCountry($country) {
+		$this->country = $country;
+	}
+
+	/**
 	 * Returns the postalCode
 	 *
-	 * @return integer $postalCode
+	 * @return string postalCode
 	 */
 	public function getPostalCode() {
 		return $this->postalCode;
@@ -255,7 +360,7 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Sets the postalCode
 	 *
 	 * @param integer $postalCode
-	 * @return void
+	 * @return string postalCode
 	 */
 	public function setPostalCode($postalCode) {
 		$this->postalCode = $postalCode;
