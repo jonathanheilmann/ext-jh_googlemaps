@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-05-18T18:31:51Z" product-name="jh_googlemaps">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>Title of location</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>Readable address of location</source>
+			</trans-unit>
+			<trans-unit id="lat_lng.description">
+				<source>Latitude,Lontitude</source>
+			</trans-unit>
+			<trans-unit id="teaser.description">
+				<source>Teaser of location</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>Description of location</source>
+			</trans-unit>
+			<trans-unit id="postal_code.description">
+				<source>Postal Code used for sorting.</source>
+			</trans-unit>
+			<trans-unit id="marker.description">
+				<source>Marker of location</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

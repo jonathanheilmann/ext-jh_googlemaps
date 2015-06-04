@@ -1,0 +1,107 @@
+{namespace jh = Heilmann\JhGooglemaps\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:flashMessages renderMode="div" />
+
+<jh:addJsFooterInlineCode name="tx_jhgooglemaps_uid" compress="TRUE">
+	var map;
+	function initialize() {
+		resizeMap();
+		var mapOptions = {<f:comment>wake up!</f:comment>
+			center: new google.maps.LatLng(<f:if condition="{selectedLocation}"><f:then>{selectedLocation.latLng}</f:then><f:else>{settings.merged.center}</f:else></f:if>),
+			zoom: {settings.merged.zoom},
+			mapTypeId: google.maps.MapTypeId.{settings.merged.mapTypeId}
+		};
+		map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+		var infowindow = new google.maps.InfoWindow();
+
+		<f:for each="{locations}" as="location">
+			<f:if condition="{location.marker}">
+				var markerimage_{location.marker.uid} = {
+					url: '{location.marker.image.originalResource.publicUrl}',
+					<f:if condition="{location.marker.size}">size: new google.maps.Size({location.marker.size}),</f:if>
+					<f:if condition="{location.marker.origin}">origin: new google.maps.Point({location.marker.origin}),</f:if>
+					<f:if condition="{location.marker.anchor}">anchor: new google.maps.Point({location.marker.anchor}),</f:if>
+				}
+			</f:if>
+		</f:for>
+		<f:for each="{locations}" as="location">
+			marker_{location.uid} = new google.maps.Marker({
+				<f:comment>wake up!</f:comment>position: new google.maps.LatLng({location.latLng}),
+				map: map,
+				title: "{location.title}",
+				<f:if condition="{location.marker}">icon: markerimage_{location.marker.uid},</f:if>
+				<f:if condition="{location.marker.shapeCoords}"><f:if condition="{location.marker.shapeType}">
+					shape: {
+						<f:comment>wake up!</f:comment>coords: {location.marker.shapeCoords},
+						type: '{location.marker.shapeType}'
+					},
+				</f:if></f:if>
+				<f:if condition="{location} == {selectedLocation}">animation: google.maps.Animation.BOUNCE</f:if>
+			});
+
+			<f:if condition="{location.description}">
+				google.maps.event.addListener(marker_{location.uid}, 'click', (function() {
+					infowindow.setContent(<jh:format.trim>'
+						<f:if condition="{location.teaser}">
+							<f:then>
+								<p>{location.teaser->f:format.nl2br()}</p>
+							</f:then>
+							<f:else>
+								<f:format.crop maxCharacters="30" append="...">{location.description->f:format.html()}</f:format.crop>
+							</f:else>
+						</f:if>
+						<f:if condition="{location.address}"><p>{location.address->f:format.nl2br()}</p></f:if>
+						<f:link.action action="map" arguments="{selectedLocation: location}" section="{location.uid}">[mehr]</f:link.action>
+					'</jh:format.trim>);
+					infowindow.open(map, marker_{location.uid});
+				}));
+			</f:if>
+		</f:for>
+	}
+	google.maps.event.addDomListener(window, "load", initialize);
+
+	function resizeMap() {
+		var container = document.getElementById("map_container");
+		var width = container.offsetWidth;
+		var height = width * (1 / ({settings.merged.mapRatio}));
+		var maxHeight = window.innerHeight * 0.7;
+		if (height > maxHeight) height = maxHeight;
+		container.style.height = height+"px";
+		if (typeof map != 'undefined') map.setCenter(new google.maps.LatLng(<f:if condition="{selectedLocation}"><f:then>{selectedLocation.latLng}</f:then><f:else>{settings.merged.center}</f:else></f:if>));
+	}
+
+	window.onresize = resizeMap();
+	if (window.DeviceOrientationEvent) {
+		window.addEventListener('orientationchange', function(eventData) {
+			switch(window.orientation) {
+				case -90:
+				case 90:
+					resizeMap();
+					break;
+				case 0:
+				case 180:
+					resizeMap();
+					break;
+				default:
+					break;
+			}
+		}, false);
+	}
+
+</jh:addJsFooterInlineCode>
+
+<div id="map_container" style="width: 100%">
+	<div id="map_canvas" style="width: 100%; height:100%"></div>
+</div>
+
+<f:if condition="{selectedLocation}">
+	<a name="c{selectedLocation.uid}"></a>
+	<f:render partial="Location/Details" arguments="{location:selectedLocation}" />
+</f:if>
+
+</f:section>

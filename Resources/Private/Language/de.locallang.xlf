@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-05-11T16:33:34Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="map.displayInGoogleMaps" approved="yes">
+			<source>Display in Google Maps</source>
+			<target>In Google Maps anzeigen</target>
+		</trans-unit>
+		<trans-unit id="map.displayList" approved="yes">
+			<source>Display locations as list</source>
+			<target>Orte als Liste anzeigen</target>
+		</trans-unit>
+		<trans-unit id="map.displayMap" approved="yes">
+			<source>Display locations at map</source>
+			<target>Orte auf Karte anzeigen</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

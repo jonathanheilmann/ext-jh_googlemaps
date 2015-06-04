@@ -1,0 +1,31 @@
+
+plugin.tx_jhgooglemaps {
+	view {
+		# cat=plugin.tx_jhgooglemaps/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:jh_googlemaps/Resources/Private/Templates/
+		# cat=plugin.tx_jhgooglemaps/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:jh_googlemaps/Resources/Private/Partials/
+		# cat=plugin.tx_jhgooglemaps/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:jh_googlemaps/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_jhgooglemaps//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+## Define custom categories
+# customsubcategory=settings=Settings
+
+plugin.tx_jhgooglemaps {
+	settings {
+		googlemaps {
+			# cat=plugin.tx_jhgooglemaps/settings/001; type=string; label=Your Google API key
+			api_key = AIzaSyBz93FZLPFqX0rk6r-7YwcT2cL3W1CBubY
+			# cat=plugin.tx_jhgooglemaps/settings/002; type=options[false,true]; label=Use sensor
+			sensor = false
+		}
+	}
+}

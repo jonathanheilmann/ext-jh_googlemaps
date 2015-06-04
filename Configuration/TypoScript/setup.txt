@@ -1,0 +1,90 @@
+
+plugin.tx_jhgooglemaps {
+	view {
+		templateRootPath = {$plugin.tx_jhgooglemaps.view.templateRootPath}
+		partialRootPath = {$plugin.tx_jhgooglemaps.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_jhgooglemaps.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_jhgooglemaps.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
+
+plugin.tx_jhgooglemaps._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-jh-googlemaps table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-jh-googlemaps table th {
+		font-weight:bold;
+	}
+
+	.tx-jh-googlemaps table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)
+
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+plugin.tx_jhgooglemaps {
+	settings {
+	}
+}
+
+page.includeJSFooterlibs {
+	tx_jhgooglemaps10 = http://maps.googleapis.com/maps/api/js?key={$plugin.tx_jhgooglemaps.settings.googlemaps.api_key}&sensor={$plugin.tx_jhgooglemaps.settings.googlemaps.sensor}
+	tx_jhgooglemaps10.insertData = 1
+	tx_jhgooglemaps10.external = 1
+}
+
+plugin.tx_jhgooglemaps._CSS_DEFAULT_STYLE >
+plugin.tx_jhgooglemaps._CSS_DEFAULT_STYLE (
+	.tx-jh-googlemaps div#map_canvas {
+		width: 100%;
+		height: 100%;
+	}
+	.tx-jh-googlemaps table {
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 24px;
+	}
+	.tx-jh-googlemaps table > tbody > tr:nth-child(odd) {
+		background-color: #f9f9f9;
+	}
+	.tx-jh-googlemaps table > tbody > tr:nth-child(even) {
+		background-color: #fdfdfd;
+	}
+	.tx-jh-googlemaps table > tbody > tr:hover {
+		background-color: #f5f5f5;
+	}
+	.tx-jh-googlemaps table > tbody > tr > td {
+		padding: 8px;
+		line-height: 1.55;
+		vertical-align: top;
+		border-top: 1px solid #dddddd;
+	}
+)

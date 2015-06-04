@@ -1,0 +1,207 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Function</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<switchableControllerActions>
+						<TCEforms>
+							<label>Select function</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">Google Maps</numIndex>
+										<numIndex index="1">Location->map;Location->list;Location->show</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">Location details</numIndex>
+										<numIndex index="1">Location->show;Location->map</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+					<settings.categoriesList>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>Categories:</label>
+							<config>
+								<type>select</type>
+								<autoSizeMax>50</autoSizeMax>
+								<foreign_table>sys_category</foreign_table>
+								<foreign_table_where> AND sys_category.sys_language_uid IN (-1, 0) ORDER BY sys_category.sorting ASC</foreign_table_where>
+								<maxitems>9999</maxitems>
+								<renderMode>tree</renderMode>
+								<size>10</size>
+								<treeConfig>
+									<appearance>
+										<expandAll>1</expandAll>
+										<showHeader>1</showHeader>
+									</appearance>
+									<parentField>parent</parentField>
+								</treeConfig>
+							</config>
+						</TCEforms>
+					</settings.categoriesList>
+					<settings.flexform.center>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>Center:</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<max>60</max>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.flexform.center>
+					<settings.flexform.zoom>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>Zoom:</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">0</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="0">11</numIndex>
+										<numIndex index="1">11</numIndex>
+									</numIndex>
+									<numIndex index="12" type="array">
+										<numIndex index="0">12</numIndex>
+										<numIndex index="1">12</numIndex>
+									</numIndex>
+									<numIndex index="13" type="array">
+										<numIndex index="0">13</numIndex>
+										<numIndex index="1">13</numIndex>
+									</numIndex>
+									<numIndex index="14" type="array">
+										<numIndex index="0">14</numIndex>
+										<numIndex index="1">14</numIndex>
+									</numIndex>
+									<numIndex index="15" type="array">
+										<numIndex index="0">15</numIndex>
+										<numIndex index="1">15</numIndex>
+									</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">16</numIndex>
+										<numIndex index="1">16</numIndex>
+									</numIndex>
+									<numIndex index="17" type="array">
+										<numIndex index="0">17</numIndex>
+										<numIndex index="1">17</numIndex>
+									</numIndex>
+									<numIndex index="18" type="array">
+										<numIndex index="0">18</numIndex>
+										<numIndex index="1">18</numIndex>
+									</numIndex>
+									<numIndex index="19" type="array">
+										<numIndex index="0">19</numIndex>
+										<numIndex index="1">19</numIndex>
+									</numIndex>
+									<numIndex index="20" type="array">
+										<numIndex index="0">20</numIndex>
+										<numIndex index="1">20</numIndex>
+									</numIndex>
+									<numIndex index="21" type="array">
+										<numIndex index="0">21</numIndex>
+										<numIndex index="1">21</numIndex>
+									</numIndex>
+								</items>
+								<default>6</default>
+							</config>
+						</TCEforms>
+					</settings.flexform.zoom>
+					<settings.flexform.mapTypeId>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>MapTypeId:</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">HYBRID</numIndex>
+										<numIndex index="1">HYBRID</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">RAODMAP</numIndex>
+										<numIndex index="1">RAODMAP</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">SATELLITE</numIndex>
+										<numIndex index="1">SATELLITE</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">TERRAIN</numIndex>
+										<numIndex index="1">TERRAIN</numIndex>
+									</numIndex>
+								</items>
+								<default>RAODMAP</default>
+							</config>
+						</TCEforms>
+					</settings.flexform.mapTypeId>
+					<settings.flexform.mapRatio>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>Map ratio:</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<max>7</max>
+								<eval>trim</eval>
+								<default>4/3</default>
+							</config>
+						</TCEforms>
+					</settings.flexform.mapRatio>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

@@ -1,0 +1,9 @@
+{namespace jh = Heilmann\JhGooglemaps\ViewHelpers}
+
+<div class="tx-jh-googlemaps">
+	<div class="menu">
+		<f:if condition="{0: '{jh:controllerActionName()}'} == {0: 'list'}"><f:link.action action="map"><f:translate key="map.displayMap" /></f:link.action></f:if>
+		<f:if condition="{0: '{jh:controllerActionName()}'} == {0: 'map'}"><f:link.action action="list"><f:translate key="map.displayList" /></f:link.action></f:if>
+	</div>
+	<f:render section="main" />
+</div>
