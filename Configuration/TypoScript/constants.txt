@@ -26,6 +26,12 @@ plugin.tx_jhgooglemaps {
 			api_key = AIzaSyBz93FZLPFqX0rk6r-7YwcT2cL3W1CBubY
 			# cat=plugin.tx_jhgooglemaps/settings/002; type=options[false,true]; label=Use sensor
 			sensor = false
+			# cat=plugin.tx_jhgooglemaps/settings/003; type=options[false,true]; label=Use markerCluster
+			markerCluster = true
+			# cat=plugin.tx_jhgooglemaps/settings/004; type=string; label=Path to markerclusterer resource
+			markerClusterResource = EXT:jh_googlemaps/Resources/Public/JavaScript/markerclusterer.min.js
+			# cat=plugin.tx_jhgooglemaps/settings/005; type=options[Default,Blankneedle,Conversation,Heart,People]; label=Select clusterStyles
+			clusterStyles = Default
 		}
 	}
 }

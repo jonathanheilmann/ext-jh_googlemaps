@@ -17,6 +17,13 @@
 		};
 		map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 
+		<f:if condition="{settings.googlemaps.markerCluster}">
+			var clusterStyles = [];
+			<f:render partial="Location/ClusterStyles/{settings.googlemaps.clusterStyles}" arguments="{settings: setting, locations: locations}" />
+			var mcOptions = {styles: clusterStyles, averageCenter: true,};
+			var mc = new MarkerClusterer(map, [], mcOptions);
+		</f:if>
+
 		var infowindow = new google.maps.InfoWindow();
 
 		<f:for each="{locations}" as="location">
@@ -43,6 +50,9 @@
 				</f:if></f:if>
 				<f:if condition="{location} == {selectedLocation}">animation: google.maps.Animation.BOUNCE</f:if>
 			});
+			<f:if condition="{settings.googlemaps.markerCluster}">
+				mc.addMarker(marker_{location.uid}, false);
+			</f:if>
 
 			<f:if condition="{location.description}">
 				google.maps.event.addListener(marker_{location.uid}, 'click', (function() {
@@ -62,6 +72,10 @@
 				}));
 			</f:if>
 		</f:for>
+
+		<f:if condition="{settings.googlemaps.markerCluster}">
+			mc.repaint();
+		</f:if>
 	}
 	google.maps.event.addDomListener(window, "load", initialize);
 

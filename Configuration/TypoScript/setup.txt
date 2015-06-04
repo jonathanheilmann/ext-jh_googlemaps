@@ -52,13 +52,22 @@ plugin.tx_jhgooglemaps._CSS_DEFAULT_STYLE (
 
 plugin.tx_jhgooglemaps {
 	settings {
+		googlemaps {
+			markerCluster = {$plugin.tx_jhgooglemaps.settings.googlemaps.markerCluster}
+			clusterStyles = {$plugin.tx_jhgooglemaps.settings.googlemaps.clusterStyles}
+		}
 	}
 }
 
+[globalVar = LIT:true = {$plugin.tx_jhgooglemaps.settings.googlemaps.markerCluster}]
+	page.includeJSFooterlibs {
+		tx_jhgooglemaps10 = {$plugin.tx_jhgooglemaps.settings.googlemaps.markerClusterResource}
+	}
+[global]
 page.includeJSFooterlibs {
-	tx_jhgooglemaps10 = http://maps.googleapis.com/maps/api/js?key={$plugin.tx_jhgooglemaps.settings.googlemaps.api_key}&sensor={$plugin.tx_jhgooglemaps.settings.googlemaps.sensor}
-	tx_jhgooglemaps10.insertData = 1
-	tx_jhgooglemaps10.external = 1
+	tx_jhgooglemaps20 = http://maps.googleapis.com/maps/api/js?key={$plugin.tx_jhgooglemaps.settings.googlemaps.api_key}&sensor={$plugin.tx_jhgooglemaps.settings.googlemaps.sensor}
+	tx_jhgooglemaps20.insertData = 1
+	tx_jhgooglemaps20.external = 1
 }
 
 plugin.tx_jhgooglemaps._CSS_DEFAULT_STYLE >
