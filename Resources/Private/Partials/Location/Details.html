@@ -1,14 +1,22 @@
 {namespace jh = Heilmann\JhGooglemaps\ViewHelpers}
 
-<h2>{location.title}</h2>
-
-<p>
-	<b><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></b>
-	<br/>
-	<a href="{jh:googleMapsLink(coordinates: location.latLng, description: location.title)}" target="new">
-		<f:translate key="map.displayInGoogleMaps" />
-	</a>
-</p>
-<f:if condition="{location.description}">
-	{location.description->f:format.html()}
-</f:if>
+<div class="image-header-2 image-beside-right image-beside">
+	<div class="image-wrap">
+		<figure class="image">
+			<f:if condition="{location.image}">
+				<f:image image="{location.image}" width="{settings.location.image.width}" height="{settings.location.image.height}"/>
+			</f:if>
+		</figure>
+	</div>
+	<div class="text">
+		<h2>{location.title}</h2>
+		<p>
+			<b><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></b>
+			<br/>
+			<a href="{jh:googleMapsLink(coordinates: location.latLng, description: location.title)}" target="new">
+				<f:translate key="map.displayInGoogleMaps" />
+			</a>
+		</p>
+		{location.description->f:format.html()}
+	</div>
+</div>

@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $GLOBALS['TCA']['tx_jhgooglemaps_domain_model_location'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_jhgooglemaps_domain_model_location']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, street, street_number, postal_code, city, country, lat_lng, teaser, description, marker',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, street, street_number, postal_code, city, country, lat_lng, teaser, description, image, marker',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, street, street_number, postal_code, city, country, lat_lng, teaser, description;;;richtext:rte_transform[mode=ts_links], marker, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, street, street_number, postal_code, city, country, lat_lng, teaser, description;;;richtext:rte_transform[mode=ts_links], image, marker, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -188,6 +188,15 @@ $GLOBALS['TCA']['tx_jhgooglemaps_domain_model_location'] = array(
 						'type' => 'script'
 					)
 				)
+			),
+		),
+		'image' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:jh_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_jhgooglemaps_domain_model_location.image',
+			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+				'image',
+				array('maxitems' => 1),
+				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 			),
 		),
 		'marker' => array(

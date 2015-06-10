@@ -124,6 +124,16 @@
                             "propertyName": "description",
                             "propertyType": "RichText",
                             "uid": "731234380006"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Image for location",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "image",
+                            "propertyType": "Image",
+                            "uid": "116019799819"
                         }
                     ]
                 },
@@ -266,7 +276,7 @@
             "sourceLanguage": "en",
             "state": "beta",
             "targetVersion": "6.2",
-            "version": "0.3.0-dev"
+            "version": "0.4.0-dev"
         },
         "extensionKey": "jh_googlemaps",
         "name": "Google Maps",
@@ -307,7 +317,7 @@
         }
     ],
     "log": {
-        "last_modified": "2015-06-04 08:59",
+        "last_modified": "2015-06-10 09:04",
         "extension_builder_version": "6.2.0",
         "be_user": "Jonathan Heilmann (1)"
     }

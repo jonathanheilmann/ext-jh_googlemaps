@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-06-04T19:21:16Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location" approved="yes">
+			<source>Location</source>
+			<target>Ort</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.address" approved="yes">
+			<source>Address</source>
+			<target>Adresse</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.city" approved="yes">
+			<source>City</source>
+			<target>Stadt</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.country" approved="yes">
+			<source>Country</source>
+			<target>Land</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.description" approved="yes">
+			<source>Description</source>
+			<target>Beschreibung</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.lat_lng" approved="yes">
+			<source>Lat Lng</source>
+			<target>Lat Lng</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.marker" approved="yes">
+			<source>Marker</source>
+			<target>Marker</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.postal_code" approved="yes">
+			<source>Postal Code</source>
+			<target>Postleitzahl</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.street" approved="yes">
+			<source>Street</source>
+			<target>Straße</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.street_number" approved="yes">
+			<source>Street Number</source>
+			<target>Hausnummer</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.teaser" approved="yes">
+			<source>Teaser</source>
+			<target>Teaster</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.title" approved="yes">
+			<source>Title</source>
+			<target>Titel</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_marker" approved="yes">
+			<source>Marker</source>
+			<target>Marker</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_marker.anchor" approved="yes">
+			<source>Anchor</source>
+			<target>Anchor</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_marker.image" approved="yes">
+			<source>Image</source>
+			<target>Bild</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_marker.origin" approved="yes">
+			<source>Origin</source>
+			<target>Herkunft</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_marker.shape_coords" approved="yes">
+			<source>Shape Coords</source>
+			<target>Umriss-Koordinaten</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_marker.shape_type" approved="yes">
+			<source>Shape Type</source>
+			<target>Umriss-Typ</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_marker.size" approved="yes">
+			<source>Size</source>
+			<target>Größe</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_marker.title" approved="yes">
+			<source>Title</source>
+			<target>Titel</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

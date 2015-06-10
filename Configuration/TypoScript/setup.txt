@@ -56,6 +56,12 @@ plugin.tx_jhgooglemaps {
 			markerCluster = {$plugin.tx_jhgooglemaps.settings.googlemaps.markerCluster}
 			clusterStyles = {$plugin.tx_jhgooglemaps.settings.googlemaps.clusterStyles}
 		}
+		location {
+			image {
+				height = 200c
+				width = 200c
+			}
+		}
 	}
 }
 
