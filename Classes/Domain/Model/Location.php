@@ -104,6 +104,13 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $description = '';
 
 	/**
+	 * Image for location
+	 *
+	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+	 */
+	protected $image = NULL;
+
+	/**
 	 * Marker of location
 	 *
 	 * @var \Heilmann\JhGooglemaps\Domain\Model\Marker
@@ -337,6 +344,25 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setPostalCode($postalCode) {
 		$this->postalCode = $postalCode;
+	}
+
+	/**
+	 * Returns the image
+	 *
+	 * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+	 */
+	public function getImage() {
+		return $this->image;
+	}
+
+	/**
+	 * Sets the image
+	 *
+	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+	 * @return void
+	 */
+	public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image) {
+		$this->image = $image;
 	}
 
 }
