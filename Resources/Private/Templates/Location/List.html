@@ -11,51 +11,102 @@
 		<f:for each="{locations}" as="location">
 			<tr>
 				<td>
-					<div class="image-header-2 image-beside-right image-beside">
-						<div class="image-wrap">
-							<figure class="image">
-								<f:if condition="{location.image}">
-									<f:image image="{location.image}" width="{settings.location.image.width}" height="{settings.location.image.height}"/>
-								</f:if>
-							</figure>
-						</div>
-						<div class="text">
-							<a name="c{location.uid}"></a>
-							<h2>{location.title}</h2>
-							<f:if condition="{0: location} == {0: selectedLocation}">
-								<f:then>
-									<p>
-										<b><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></b>
-										<br/>
-										<a href="{jh:googleMapsLink(coordinates: location.latLng, description: location.title)}" target="new">
-											<f:translate key="map.displayInGoogleMaps" />
-										</a>
-									</p>
-									<f:if condition="{location.teaser}">
-										<p>
-											<b>{location.teaser->f:format.nl2br()}</b>
-										</p>
-									</f:if>
-									<f:if condition="{location.description}">
-										{location.description->f:format.html()}
-									</f:if>
-									<f:link.action action="list">[weniger]</f:link.action>
-								</f:then>
-								<f:else>
-									<p><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></p>
-									<f:if condition="{location.teaser}">
+					<jh:extension.loaded extensionName="bootstrap_package">
+						<f:then>
+							<div class="image-header-2 image-beside-right image-beside">
+								<div class="image-wrap">
+									<figure class="image">
+										<f:if condition="{location.image}">
+											<f:image image="{location.image}" width="{settings.location.image.width}" height="{settings.location.image.height}"/>
+										</f:if>
+									</figure>
+								</div>
+								<div class="text">
+									<a name="c{location.uid}"></a>
+									<h2>{location.title}</h2>
+									<f:if condition="{0: location} == {0: selectedLocation}">
 										<f:then>
-											<p>{location.teaser->f:format.nl2br()}</p>
+											<p>
+												<b><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></b>
+												<br/>
+												<a href="{jh:googleMapsLink(coordinates: location.latLng, description: location.title)}" target="new">
+													<f:translate key="map.displayInGoogleMaps" />
+												</a>
+											</p>
+											<f:if condition="{location.teaser}">
+												<p>
+													<b>{location.teaser->f:format.nl2br()}</b>
+												</p>
+											</f:if>
+											<f:if condition="{location.description}">
+												{location.description->f:format.html()}
+											</f:if>
+											<f:link.action action="list">[weniger]</f:link.action>
 										</f:then>
 										<f:else>
-											<f:format.crop maxCharacters="30" append="...">{location.description->f:format.html()}</f:format.crop>
+											<p><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></p>
+											<f:if condition="{location.teaser}">
+												<f:then>
+													<p>{location.teaser->f:format.nl2br()}</p>
+												</f:then>
+												<f:else>
+													<f:format.crop maxCharacters="30" append="...">{location.description->f:format.html()}</f:format.crop>
+												</f:else>
+											</f:if>
+											<f:link.action action="list" arguments="{selectedLocation: location}" section="{location.uid}">[mehr]</f:link.action>
 										</f:else>
 									</f:if>
-									<f:link.action action="list" arguments="{selectedLocation: location}" section="{location.uid}">[mehr]</f:link.action>
-								</f:else>
-							</f:if>
-						</div>
-					</div>
+								</div>
+							</div>
+						</f:then>
+						<f:else>
+							<div class="csc-textpic csc-textpic-intext-right-nowrap" style="margin-top: 10px;">
+								<div class="csc-textpic-imagewrap">
+									<div class="csc-textpic-image csc-textpic-last">
+										<f:if condition="{location.image}">
+											<f:image image="{location.image}" width="{settings.location.image.width}" height="{settings.location.image.height}"/>
+										</f:if>
+									</div>
+								</div>
+								<div class="csc-textpic-text">
+									<a name="c{location.uid}"></a>
+									<h2>{location.title}</h2>
+									<f:if condition="{0: location} == {0: selectedLocation}">
+										<f:then>
+											<p>
+												<b><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></b>
+												<br/>
+												<a href="{jh:googleMapsLink(coordinates: location.latLng, description: location.title)}" target="new">
+													<f:translate key="map.displayInGoogleMaps" />
+												</a>
+											</p>
+											<f:if condition="{location.teaser}">
+												<p>
+													<b>{location.teaser->f:format.nl2br()}</b>
+												</p>
+											</f:if>
+											<f:if condition="{location.description}">
+												{location.description->f:format.html()}
+											</f:if>
+											<f:link.action action="list">[weniger]</f:link.action>
+										</f:then>
+										<f:else>
+											<p><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></p>
+											<f:if condition="{location.teaser}">
+												<f:then>
+													<p>{location.teaser->f:format.nl2br()}</p>
+												</f:then>
+												<f:else>
+													<f:format.crop maxCharacters="30" append="...">{location.description->f:format.html()}</f:format.crop>
+												</f:else>
+											</f:if>
+											<f:link.action action="list" arguments="{selectedLocation: location}" section="{location.uid}">[mehr]</f:link.action>
+										</f:else>
+									</f:if>
+								</div>
+							</div>
+						</f:else>
+					</jh:extension.loaded>
 				</td>
 			</tr>
 		</f:for>
