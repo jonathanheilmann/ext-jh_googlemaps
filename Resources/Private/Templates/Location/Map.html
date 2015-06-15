@@ -57,14 +57,7 @@
 			<f:if condition="{location.description}">
 				google.maps.event.addListener(marker_{location.uid}, 'click', (function() {
 					infowindow.setContent(<jh:format.trim>'
-						<f:if condition="{location.teaser}">
-							<f:then>
-								<p>{location.teaser->f:format.nl2br()}</p>
-							</f:then>
-							<f:else>
-								<f:format.crop maxCharacters="30" append="...">{location.description->f:format.html()}</f:format.crop>
-							</f:else>
-						</f:if>
+						{location.title}
 						<p><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></p>
 						<f:link.action action="map" arguments="{selectedLocation: location}" section="{location.uid}">[mehr]</f:link.action>
 					'</jh:format.trim>);
