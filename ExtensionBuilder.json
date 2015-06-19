@@ -48,6 +48,16 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
+                            "propertyDescription": "Optional additional notation for address",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "additionalNotation",
+                            "propertyType": "String",
+                            "uid": "262995666160"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
                             "propertyDescription": "Street",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
@@ -276,7 +286,7 @@
             "sourceLanguage": "en",
             "state": "beta",
             "targetVersion": "6.2",
-            "version": "0.4.0-dev"
+            "version": "0.5.0-dev"
         },
         "extensionKey": "jh_googlemaps",
         "name": "Google Maps",
@@ -317,7 +327,7 @@
         }
     ],
     "log": {
-        "last_modified": "2015-06-10 09:04",
+        "last_modified": "2015-06-19 05:10",
         "extension_builder_version": "6.2.0",
         "be_user": "Jonathan Heilmann (1)"
     }

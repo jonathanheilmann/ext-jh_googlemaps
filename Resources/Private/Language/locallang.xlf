@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-10T21:04:06Z" product-name="jh_googlemaps">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-19T17:10:07Z" product-name="jh_googlemaps">
 		<header/>
 		<body>
 			<trans-unit id="tx_jhgooglemaps_domain_model_location">
@@ -8,6 +8,9 @@
 			</trans-unit>
 			<trans-unit id="tx_jhgooglemaps_domain_model_location.title">
 				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_jhgooglemaps_domain_model_location.additional_notation">
+				<source>Additional Notation</source>
 			</trans-unit>
 			<trans-unit id="tx_jhgooglemaps_domain_model_location.street">
 				<source>Street</source>
