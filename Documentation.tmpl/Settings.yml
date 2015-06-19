@@ -10,8 +10,8 @@
 conf.py:
   copyright: 2015
   project: Google Maps
-  version: 0.4.0-dev
-  release: 0.4.0-dev
+  version: 0.5.0-dev
+  release: 0.5.0-dev
   intersphinx_mapping:
     t3tsref:
     - http://docs.typo3.org/typo3cms/TyposcriptReference/

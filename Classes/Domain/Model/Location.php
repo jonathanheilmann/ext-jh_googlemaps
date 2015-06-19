@@ -118,6 +118,13 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $marker = NULL;
 
 	/**
+	 * Optional additional notation for address
+	 *
+	 * @var string
+	 */
+	protected $additionalNotation = '';
+
+	/**
 	 * Returns the title
 	 *
 	 * @return string $title
@@ -363,6 +370,25 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image) {
 		$this->image = $image;
+	}
+
+	/**
+	 * Returns the additionalNotation
+	 *
+	 * @return string $additionalNotation
+	 */
+	public function getAdditionalNotation() {
+		return $this->additionalNotation;
+	}
+
+	/**
+	 * Sets the additionalNotation
+	 *
+	 * @param string $additionalNotation
+	 * @return void
+	 */
+	public function setAdditionalNotation($additionalNotation) {
+		$this->additionalNotation = $additionalNotation;
 	}
 
 }

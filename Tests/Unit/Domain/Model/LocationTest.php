@@ -74,6 +74,29 @@ class LocationTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
+	public function getAdditionalNotationReturnsInitialValueForString() {
+		$this->assertSame(
+			'',
+			$this->subject->getAdditionalNotation()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setAdditionalNotationForStringSetsAdditionalNotation() {
+		$this->subject->setAdditionalNotation('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'additionalNotation',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
 	public function getStreetReturnsInitialValueForString() {
 		$this->assertSame(
 			'',

@@ -7,6 +7,7 @@ CREATE TABLE tx_jhgooglemaps_domain_model_location (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	title varchar(255) DEFAULT '' NOT NULL,
+	additional_notation varchar(255) DEFAULT '' NOT NULL,
 	street varchar(255) DEFAULT '' NOT NULL,
 	street_number varchar(255) DEFAULT '' NOT NULL,
 	postal_code varchar(255) DEFAULT '' NOT NULL,

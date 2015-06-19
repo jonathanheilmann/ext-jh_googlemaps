@@ -19,6 +19,11 @@
 						<f:translate key="map.displayInGoogleMaps" />
 					</a>
 				</p>
+				<f:if condition="{location.teaser}">
+					<p>
+						<b>{location.teaser->f:format.nl2br()}</b>
+					</p>
+				</f:if>
 				{location.description->f:format.html()}
 			</div>
 		</div>
@@ -41,6 +46,11 @@
 						<f:translate key="map.displayInGoogleMaps" />
 					</a>
 				</p>
+				<f:if condition="{location.teaser}">
+					<p>
+						<b>{location.teaser->f:format.nl2br()}</b>
+					</p>
+				</f:if>
 				{location.description->f:format.html()}
 			</div>
 		</div>

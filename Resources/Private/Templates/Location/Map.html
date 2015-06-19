@@ -6,7 +6,7 @@
 
 <f:flashMessages renderMode="div" />
 
-<jh:addJsFooterInlineCode name="tx_jhgooglemaps_uid" compress="TRUE">
+<jh:addJsFooterInlineCode name="tx_jhgooglemaps_uid" compress="true">
 	var map;
 	function initialize() {
 		resizeMap();
@@ -15,6 +15,12 @@
 			zoom: {settings.merged.zoom},
 			mapTypeId: google.maps.MapTypeId.{settings.merged.mapTypeId}
 		};
+		<f:alias map="{mapOptions: '{f:cObject(typoscriptObjectPath: \'plugin.tx_jhgooglemaps.settings.googlemaps.mapOptions\')}'}">
+			<f:if condition="{mapOptions}">
+				var extendedOptions= {<f:comment>wake up!</f:comment>{mapOptions}};
+				mapOptions = extend(mapOptions, extendedOptions);
+			</f:if>
+		</f:alias>
 		map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 
 		<f:if condition="{settings.googlemaps.markerCluster}">
@@ -59,6 +65,7 @@
 					infowindow.setContent(<jh:format.trim>'
 						{location.title}
 						<p><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></p>
+						<f:if condition="{location.teaser}"><p><b>{location.teaser->f:format.nl2br()}</b></p></f:if>
 						<f:link.action action="map" arguments="{selectedLocation: location}" section="{location.uid}">[mehr]</f:link.action>
 					'</jh:format.trim>);
 					infowindow.open(map, marker_{location.uid});
@@ -99,6 +106,31 @@
 			}
 		}, false);
 	}
+	
+	/**
+	 * Merge defaults with user options
+	 * source: http://gomakethings.com/vanilla-javascript-version-of-jquery-extend/
+	 *
+	 * @private
+	 * @param {Object} defaults Default settings
+	 * @param {Object} options User options
+	 * @returns {Object} Merged values of defaults and options
+	 */
+	var extend = function ( defaults, options ) {
+	    var extended = {};
+	    var prop;
+	    for (prop in defaults) {
+	        if (Object.prototype.hasOwnProperty.call(defaults, prop)) {
+	            extended[prop] = defaults[prop];
+	        }
+	    }
+	    for (prop in options) {
+	        if (Object.prototype.hasOwnProperty.call(options, prop)) {
+	            extended[prop] = options[prop];
+	        }
+	    }
+	    return extended;
+	};
 
 </jh:addJsFooterInlineCode>
 

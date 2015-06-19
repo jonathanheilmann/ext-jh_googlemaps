@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-10T21:04:06Z" product-name="jh_googlemaps">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-19T17:10:07Z" product-name="jh_googlemaps">
 		<header/>
 		<body>
 			<trans-unit id="title.description">
 				<source>Title of location</source>
+			</trans-unit>
+			<trans-unit id="additional_notation.description">
+				<source>Optional additional notation for address</source>
 			</trans-unit>
 			<trans-unit id="street.description">
 				<source>Street</source>
