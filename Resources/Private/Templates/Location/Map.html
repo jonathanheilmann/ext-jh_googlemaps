@@ -26,7 +26,12 @@
 		<f:if condition="{settings.googlemaps.markerCluster}">
 			var clusterStyles = [];
 			<f:render partial="Location/ClusterStyles/{settings.googlemaps.clusterStyles}" arguments="{settings: setting, locations: locations}" />
-			var mcOptions = {styles: clusterStyles, averageCenter: true,};
+			var mcOptions = {styles: clusterStyles, averageCenter: true};
+			<f:alias map="{markerClustererOptions: '{f:cObject(typoscriptObjectPath: \'plugin.tx_jhgooglemaps.settings.googlemaps.markerClustererOptions\')}'}">
+				<f:if condition="{markerClustererOptions}">
+					mcOptions = extend(mcOptions, {<f:comment>wake up!</f:comment>{markerClustererOptions}});
+				</f:if>
+			</f:alias>
 			var mc = new MarkerClusterer(map, [], mcOptions);
 		</f:if>
 
