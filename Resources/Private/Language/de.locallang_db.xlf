@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-06-04T19:21:16Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-06-20T08:10:48Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
@@ -8,6 +8,10 @@
 		<trans-unit id="tx_jhgooglemaps_domain_model_location" approved="yes">
 			<source>Location</source>
 			<target>Ort</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.additional_notation" approved="yes">
+			<source>Additional Notation</source>
+			<target>Zusatzvermerk</target>
 		</trans-unit>
 		<trans-unit id="tx_jhgooglemaps_domain_model_location.address" approved="yes">
 			<source>Address</source>
@@ -24,6 +28,10 @@
 		<trans-unit id="tx_jhgooglemaps_domain_model_location.description" approved="yes">
 			<source>Description</source>
 			<target>Beschreibung</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.image" approved="yes">
+			<source>Image</source>
+			<target>Bild</target>
 		</trans-unit>
 		<trans-unit id="tx_jhgooglemaps_domain_model_location.lat_lng" approved="yes">
 			<source>Lat Lng</source>
