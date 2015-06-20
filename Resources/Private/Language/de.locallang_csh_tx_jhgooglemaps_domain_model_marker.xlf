@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-06-20T08:21:06Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="anchor.description" approved="yes">
+			<source>Anchor if image (X,Y)</source>
+			<target>Anker des Bildes (X,Y)</target>
+		</trans-unit>
+		<trans-unit id="image.description" approved="yes">
+			<source>Image of marker</source>
+			<target>Bild des Markers</target>
+		</trans-unit>
+		<trans-unit id="origin.description" approved="yes">
+			<source>Origin of image (X,Y)</source>
+			<target>Herkunft des Bildes (X,Y)</target>
+		</trans-unit>
+		<trans-unit id="shape_coords.description" approved="yes">
+			<source>https://developers.google.com/maps/documentation/javascript/reference?hl=de#MarkerShape</source>
+			<target>https://developers.google.com/maps/documentation/javascript/reference?hl=de#MarkerShape</target>
+		</trans-unit>
+		<trans-unit id="shape_type.description" approved="yes">
+			<source>Describes the shape's type and can be circle, poly or rect.</source>
+			<target>Beschreibt des Umriss-Typ. Gültige Typen: circle, poly, rect</target>
+		</trans-unit>
+		<trans-unit id="size.description" approved="yes">
+			<source>Size of icon (X,Y)</source>
+			<target>Größe des Icons (X,Y)</target>
+		</trans-unit>
+		<trans-unit id="title.description" approved="yes">
+			<source>Title of marker</source>
+			<target>Titel des Markers</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

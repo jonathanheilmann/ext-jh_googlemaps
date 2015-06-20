@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-06-04T19:22:18Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-06-20T08:09:03Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
@@ -10,12 +10,12 @@
 			<target>In Google Maps anzeigen</target>
 		</trans-unit>
 		<trans-unit id="map.displayList" approved="yes">
-			<source>Display locations as list</source>
-			<target>Orte als Liste anzeigen</target>
+			<source>Display as list</source>
+			<target>Als Liste anzeigen</target>
 		</trans-unit>
 		<trans-unit id="map.displayMap" approved="yes">
-			<source>Display locations at map</source>
-			<target>Orte auf Karte anzeigen</target>
+			<source>Display at map</source>
+			<target>Auf Karte anzeigen</target>
 		</trans-unit>
 		<trans-unit id="map.noLocations" approved="yes">
 			<source>No locations found</source>
@@ -24,6 +24,14 @@
 		<trans-unit id="tx_jhgooglemaps_domain_model_location" approved="yes">
 			<source>Location</source>
 			<target>Ort</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.additional_notation" approved="yes">
+			<source>Additional Notation</source>
+			<target>Zusatzvermerk</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.address" approved="yes">
+			<source>Address</source>
+			<target>Adresse</target>
 		</trans-unit>
 		<trans-unit id="tx_jhgooglemaps_domain_model_location.city" approved="yes">
 			<source>City</source>
@@ -36,6 +44,10 @@
 		<trans-unit id="tx_jhgooglemaps_domain_model_location.description" approved="yes">
 			<source>Description</source>
 			<target>Beschreibung</target>
+		</trans-unit>
+		<trans-unit id="tx_jhgooglemaps_domain_model_location.image" approved="yes">
+			<source>Image</source>
+			<target>Bild</target>
 		</trans-unit>
 		<trans-unit id="tx_jhgooglemaps_domain_model_location.lat_lng" approved="yes">
 			<source>Lat Lng</source>

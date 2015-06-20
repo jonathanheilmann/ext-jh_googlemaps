@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-06-20T08:18:08Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="additional_notation.description" approved="yes">
+			<source>Optional additional notation for address</source>
+			<target>Optionaler Zusatzvermerk zur Adresse</target>
+		</trans-unit>
+		<trans-unit id="address.description" approved="yes">
+			<source>Readable address of location</source>
+			<target>Lesbare Adresse des Orts</target>
+		</trans-unit>
+		<trans-unit id="city.description" approved="yes">
+			<source>City</source>
+			<target>Stadt</target>
+		</trans-unit>
+		<trans-unit id="country.description" approved="yes">
+			<source>Country</source>
+			<target>Land</target>
+		</trans-unit>
+		<trans-unit id="description.description" approved="yes">
+			<source>Description of location</source>
+			<target>Beschreibung des Orts</target>
+		</trans-unit>
+		<trans-unit id="image.description" approved="yes">
+			<source>Image for location</source>
+			<target>Bild des Orts</target>
+		</trans-unit>
+		<trans-unit id="lat_lng.description" approved="yes">
+			<source>Latitude,Lontitude</source>
+			<target>Latitude,Lontitude</target>
+		</trans-unit>
+		<trans-unit id="marker.description" approved="yes">
+			<source>Marker of location</source>
+			<target>Marker des Orts</target>
+		</trans-unit>
+		<trans-unit id="postal_code.description" approved="yes">
+			<source>Postal Code</source>
+			<target>Postleitzahl</target>
+		</trans-unit>
+		<trans-unit id="street.description" approved="yes">
+			<source>Street</source>
+			<target>Straße</target>
+		</trans-unit>
+		<trans-unit id="street_number.description" approved="yes">
+			<source>Street number</source>
+			<target>Hausnummer</target>
+		</trans-unit>
+		<trans-unit id="teaser.description" approved="yes">
+			<source>Teaser of location</source>
+			<target>Teaser des Orts</target>
+		</trans-unit>
+		<trans-unit id="title.description" approved="yes">
+			<source>Title of location</source>
+			<target>Titel des Orts</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>
