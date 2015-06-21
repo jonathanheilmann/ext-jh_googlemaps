@@ -3,7 +3,17 @@
 <div class="tx-jh-googlemaps">
 	<div class="menu">
 		<f:if condition="{0: '{jh:controllerActionName()}'} == {0: 'list'}"><f:link.action action="map"><f:translate key="map.displayMap" /></f:link.action></f:if>
-		<f:if condition="{0: '{jh:controllerActionName()}'} == {0: 'map'}"><f:link.action action="list"><f:translate key="map.displayList" /></f:link.action></f:if>
+		<f:if condition="{0: '{jh:controllerActionName()}'} == {0: 'orderableList'}"><f:link.action action="map"><f:translate key="map.displayMap" /></f:link.action></f:if>
+		<f:if condition="{0: '{jh:controllerActionName()}'} == {0: 'map'}">
+			<f:if condition="{settings.merged.enableOrderableList}">
+				<f:then>
+					<f:link.action action="orderableList"><f:translate key="map.displayList" /></f:link.action>
+				</f:then>
+				<f:else>
+					<f:link.action action="list"><f:translate key="map.displayList" /></f:link.action>
+				</f:else>
+			</f:if>
+		</f:if>
 	</div>
 	<f:render section="main" />
 </div>

@@ -1,49 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-20T08:18:08Z">
-		<header>
-			<generator>LFEditor</generator>
-		</header>
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-04-19T13:18:00Z" product-name="jh_googlemaps">
+		<header/>
 		<body>
-		<trans-unit id="additional_notation.description">
-			<source>Optional additional notation for address</source>
-		</trans-unit>
-		<trans-unit id="address.description">
-			<source>Readable address of location</source>
-		</trans-unit>
-		<trans-unit id="city.description">
-			<source>City</source>
-		</trans-unit>
-		<trans-unit id="country.description">
-			<source>Country</source>
-		</trans-unit>
-		<trans-unit id="description.description">
-			<source>Description of location</source>
-		</trans-unit>
-		<trans-unit id="image.description">
-			<source>Image for location</source>
-		</trans-unit>
-		<trans-unit id="lat_lng.description">
-			<source>Latitude,Lontitude</source>
-		</trans-unit>
-		<trans-unit id="marker.description">
-			<source>Marker of location</source>
-		</trans-unit>
-		<trans-unit id="postal_code.description">
-			<source>Postal Code</source>
-		</trans-unit>
-		<trans-unit id="street.description">
-			<source>Street</source>
-		</trans-unit>
-		<trans-unit id="street_number.description">
-			<source>Street number</source>
-		</trans-unit>
-		<trans-unit id="teaser.description">
-			<source>Teaser of location</source>
-		</trans-unit>
-		<trans-unit id="title.description">
-			<source>Title of location</source>
-		</trans-unit>
+			<trans-unit id="title.description">
+				<source>Title of location</source>
+			</trans-unit>
+			<trans-unit id="additional_notation.description">
+				<source>Optional additional notation for address</source>
+			</trans-unit>
+			<trans-unit id="street.description">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="street_number.description">
+				<source>Street number</source>
+			</trans-unit>
+			<trans-unit id="postal_code.description">
+				<source>Postal Code</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="country.description">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="lat_lng.description">
+				<source>Latitude,Lontitude</source>
+			</trans-unit>
+			<trans-unit id="teaser.description">
+				<source>Teaser of location</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>Description of location</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>Image for location</source>
+			</trans-unit>
+			<trans-unit id="marker.description">
+				<source>Marker of location</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>Readable address of location</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

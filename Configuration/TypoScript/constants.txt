@@ -33,5 +33,13 @@ plugin.tx_jhgooglemaps {
 			# cat=plugin.tx_jhgooglemaps/settings/005; type=options[Default,Blankneedle,Conversation,Heart,People]; label=Select clusterStyles
 			clusterStyles = Default
 		}
+		list {
+			orderings {
+				# cat=plugin.tx_jhgooglemaps/settings/101; type=boolean; label=Enable user orderings: Display a form on top of list to allow user orderigns of list
+				enableUserOrderings = false
+				# cat=plugin.tx_jhgooglemaps/settings/102; type=boolean; label=Display orderings advice: Display an advice on top of list to inform user about orderings of lost
+				displayOrderingsAdvice = true
+			}
+		}
 	}
 }

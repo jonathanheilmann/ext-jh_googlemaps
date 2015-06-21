@@ -70,7 +70,7 @@
 						{location.title}
 						<p><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></p>
 						<f:if condition="{location.teaser}"><p><b>{location.teaser->f:format.nl2br()}</b></p></f:if>
-						<f:link.action action="map" arguments="{selectedLocation: location}" section="{location.uid}">[mehr]</f:link.action>
+						<f:link.action action="map" arguments="{selectedLocation: location}" section="{location.uid}"><f:translate key="more" /></f:link.action>
 					'</jh:format.trim>);
 					infowindow.open(map, marker_{location.uid});
 				}));

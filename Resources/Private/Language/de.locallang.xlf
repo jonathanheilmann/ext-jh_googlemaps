@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-06-20T08:09:03Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-06-21T08:22:02Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+		<trans-unit id="asc" approved="yes">
+			<source>Ascending</source>
+			<target>Steigend</target>
+		</trans-unit>
+		<trans-unit id="desc" approved="yes">
+			<source>Descending</source>
+			<target>Absteigend</target>
+		</trans-unit>
+		<trans-unit id="less" approved="yes">
+			<source>[less]</source>
+			<target>[weniger]</target>
+		</trans-unit>
 		<trans-unit id="map.displayInGoogleMaps" approved="yes">
 			<source>Display in Google Maps</source>
 			<target>In Google Maps anzeigen</target>
@@ -17,9 +29,25 @@
 			<source>Display at map</source>
 			<target>Auf Karte anzeigen</target>
 		</trans-unit>
+		<trans-unit id="map.list.order" approved="yes">
+			<source>Order by</source>
+			<target>Sortieren nach</target>
+		</trans-unit>
+		<trans-unit id="map.list.orderSubmit" approved="yes">
+			<source>Order</source>
+			<target>Sortieren</target>
+		</trans-unit>
+		<trans-unit id="map.list.orderingsAdvice" approved="yes">
+			<source>Ordered by %s</source>
+			<target>Sortiert nach %s</target>
+		</trans-unit>
 		<trans-unit id="map.noLocations" approved="yes">
 			<source>No locations found</source>
 			<target>Keine Orte gefunden</target>
+		</trans-unit>
+		<trans-unit id="more" approved="yes">
+			<source>[more]</source>
+			<target>[mehr]</target>
 		</trans-unit>
 		<trans-unit id="tx_jhgooglemaps_domain_model_location" approved="yes">
 			<source>Location</source>
