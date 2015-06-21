@@ -49,6 +49,8 @@ overwriteSettings:
     TCA: merge
     TypoScript: merge
 
+  Documentation.tmpl: keep
+  
   Resources:
     Private:
       Language: merge
@@ -67,7 +69,7 @@ overwriteSettings:
   ext_tables.sql: merge
 
 ## use static date attribute in xliff files ##
-#staticDateInXliffFiles: 2015-04-19T13:18:00Z
+staticDateInXliffFiles: 2015-04-19T13:18:00Z
 
 ## list of error codes for warnings that should be ignored ##
 #ignoreWarnings:
