@@ -6,6 +6,18 @@
 
 <f:flashMessages renderMode="div" />
 
+<f:if condition="{settings.list.orderings.enableUserOrderings}">
+	<f:form action="list" method="POST">
+		<f:translate key="map.list.order" /> 
+		<f:form.select name="orderings" options="{postal_code: '{f:translate(key: \'tx_jhgooglemaps_domain_model_location.postal_code\')}', title: '{f:translate(key: \'tx_jhgooglemaps_domain_model_location.title\')}'}" value="{orderings}" /> 
+		<f:form.select name="direction" options="{ASC: '{f:translate(key: \'asc\')}', DESC: '{f:translate(key: \'desc\')}'}" value="{direction}" /> 
+		<f:form.button type="submit" value="order"><f:translate key="map.list.orderSubmit" /></f:form.button> 
+	</f:form>
+</f:if>
+<f:if condition="{settings.list.orderings.displayOrderingsAdvice}">
+	<f:translate key="map.list.orderingsAdvice" arguments="{0: '{jh:resolveOrderingsAdvice(orderings: \'{orderingsAdvice}\')}'}"/>
+</f:if>
+
 <table>
 	<tbody>
 		<f:for each="{locations}" as="location">
@@ -39,7 +51,7 @@
 												</p>
 											</f:if>
 											{location.description->f:format.html()}
-											<f:link.action action="list">[weniger]</f:link.action>
+											<f:link.action action="list"><f:translate key="less" /></f:link.action>
 										</f:then>
 										<f:else>
 											<p><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></p>
@@ -51,7 +63,7 @@
 													<f:format.crop maxCharacters="30" append="...">{location.description->f:format.html()}</f:format.crop>
 												</f:else>
 											</f:if>
-											<f:link.action action="list" arguments="{selectedLocation: location}" section="{location.uid}">[mehr]</f:link.action>
+											<f:link.action action="list" arguments="{selectedLocation: location}" section="{location.uid}"><f:translate key="more" /></f:link.action>
 										</f:else>
 									</f:if>
 								</div>
@@ -84,7 +96,7 @@
 												</p>
 											</f:if>
 											{location.description->f:format.html()}
-											<f:link.action action="list">[weniger]</f:link.action>
+											<f:link.action action="list"><f:translate key="less" /></f:link.action>
 										</f:then>
 										<f:else>
 											<p><f:render partial="Location/Address.html" arguments="{settings: settings, location: location}" /></p>
@@ -96,7 +108,7 @@
 													<f:format.crop maxCharacters="30" append="...">{location.description->f:format.html()}</f:format.crop>
 												</f:else>
 											</f:if>
-											<f:link.action action="list" arguments="{selectedLocation: location}" section="{location.uid}">[mehr]</f:link.action>
+											<f:link.action action="list" arguments="{selectedLocation: location}" section="{location.uid}"><f:translate key="more" /></f:link.action>
 										</f:else>
 									</f:if>
 								</div>

@@ -47,6 +47,13 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $title = '';
 
 	/**
+	 * Optional additional notation for address
+	 *
+	 * @var string
+	 */
+	protected $additionalNotation = '';
+
+	/**
 	 * Street
 	 *
 	 * @var string
@@ -116,13 +123,6 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \Heilmann\JhGooglemaps\Domain\Model\Marker
 	 */
 	protected $marker = NULL;
-
-	/**
-	 * Optional additional notation for address
-	 *
-	 * @var string
-	 */
-	protected $additionalNotation = '';
 
 	/**
 	 * Returns the title

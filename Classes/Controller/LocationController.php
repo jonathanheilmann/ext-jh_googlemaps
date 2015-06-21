@@ -3,6 +3,7 @@ namespace Heilmann\JhGooglemaps\Controller;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 /***************************************************************
  *
  *  Copyright notice
@@ -76,8 +77,19 @@ class LocationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 * @return void
 	 */
 	public function listAction(\Heilmann\JhGooglemaps\Domain\Model\Location $selectedLocation = NULL) {
-		//$locations = $this->locationRepository->findAll();
-		//$this->view->assign('locations', $locations);
+		//set orderings of location repository
+		if ($this->request->hasArgument('orderings')) {
+			$orderings = $this->request->getArgument('orderings');
+			$direction = $this->request->hasArgument('direction') && strtoupper($this->request->getArgument('direction')) == 'DESC' ? QueryInterface::ORDER_DESCENDING : QueryInterface::ORDER_ASCENDING;
+			$this->locationRepository->setDefaultOrderings(array($orderings => $direction));
+		}
+		$this->view->assign('orderings', $orderings);
+		$this->view->assign('direction', $direction);
+		
+		//orderings advice
+		$orderingsAdvice = $this->locationRepository->getDefaultOrderings();
+		$this->view->assign('orderingsAdvice', $orderingsAdvice);
+		
 		$categoryUids = GeneralUtility::trimExplode(',', $this->settings['categoriesList'], TRUE);
 		$categories = array();
 		foreach ($categoryUids as $uid) {

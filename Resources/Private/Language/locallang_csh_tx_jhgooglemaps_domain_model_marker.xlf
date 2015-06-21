@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-20T08:21:06Z">
-		<header>
-			<generator>LFEditor</generator>
-		</header>
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-04-19T13:18:00Z" product-name="jh_googlemaps">
+		<header/>
 		<body>
-		<trans-unit id="anchor.description">
-			<source>Anchor if image (X,Y)</source>
-		</trans-unit>
-		<trans-unit id="image.description">
-			<source>Image of marker</source>
-		</trans-unit>
-		<trans-unit id="origin.description">
-			<source>Origin of image (X,Y)</source>
-		</trans-unit>
-		<trans-unit id="shape_coords.description">
-			<source>https://developers.google.com/maps/documentation/javascript/reference?hl=de#MarkerShape</source>
-		</trans-unit>
-		<trans-unit id="shape_type.description">
-			<source>Describes the shape's type and can be circle, poly or rect.</source>
-		</trans-unit>
-		<trans-unit id="size.description">
-			<source>Size of icon (X,Y)</source>
-		</trans-unit>
-		<trans-unit id="title.description">
-			<source>Title of marker</source>
-		</trans-unit>
+			<trans-unit id="title.description">
+				<source>Title of marker</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>Image of marker</source>
+			</trans-unit>
+			<trans-unit id="size.description">
+				<source>Size of icon (X,Y)</source>
+			</trans-unit>
+			<trans-unit id="origin.description">
+				<source>Origin of image (X,Y)</source>
+			</trans-unit>
+			<trans-unit id="anchor.description">
+				<source>Anchor if image (X,Y)</source>
+			</trans-unit>
+			<trans-unit id="shape_coords.description">
+				<source>https://developers.google.com/maps/documentation/javascript/reference?hl=de#MarkerShape</source>
+			</trans-unit>
+			<trans-unit id="shape_type.description">
+				<source>Describes the shape's type and can be circle, poly or rect.</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -42,6 +42,15 @@ class LocationRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	);
 
 	/**
+	 * get defaultOrderings
+	 *
+	 * @return array
+	 */
+	public function getDefaultOrderings() {
+		return $this->defaultOrderings;
+	}
+
+	/**
 	 * Find location with categories
 	 *
 	 * @param array $categories

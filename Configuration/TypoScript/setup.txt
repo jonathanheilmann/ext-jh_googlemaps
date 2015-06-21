@@ -71,6 +71,12 @@ plugin.tx_jhgooglemaps {
 				width = 200c
 			}
 		}
+		list {
+			orderings {
+				enableUserOrderings = {$plugin.tx_jhgooglemaps.settings.list.orderings.enableUserOrderings}
+				displayOrderingsAdvice = {$plugin.tx_jhgooglemaps.settings.list.orderings.displayOrderingsAdvice}
+			}
+		}
 	}
 }
 

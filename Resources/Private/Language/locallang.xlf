@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-20T08:09:03Z">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-21T08:22:02Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+		<trans-unit id="asc">
+			<source>Ascending</source>
+		</trans-unit>
+		<trans-unit id="desc">
+			<source>Descending</source>
+		</trans-unit>
+		<trans-unit id="less">
+			<source>[less]</source>
+		</trans-unit>
 		<trans-unit id="map.displayInGoogleMaps">
 			<source>Display in Google Maps</source>
 		</trans-unit>
@@ -14,8 +23,20 @@
 		<trans-unit id="map.displayMap">
 			<source>Display at map</source>
 		</trans-unit>
+		<trans-unit id="map.list.order">
+			<source>Order by</source>
+		</trans-unit>
+		<trans-unit id="map.list.orderSubmit">
+			<source>Order</source>
+		</trans-unit>
+		<trans-unit id="map.list.orderingsAdvice">
+			<source>Ordered by %s</source>
+		</trans-unit>
 		<trans-unit id="map.noLocations">
 			<source>No locations found</source>
+		</trans-unit>
+		<trans-unit id="more">
+			<source>[more]</source>
 		</trans-unit>
 		<trans-unit id="tx_jhgooglemaps_domain_model_location">
 			<source>Location</source>
