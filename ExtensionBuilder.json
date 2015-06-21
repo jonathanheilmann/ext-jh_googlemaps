@@ -286,7 +286,7 @@
             "sourceLanguage": "en",
             "state": "beta",
             "targetVersion": "6.2",
-            "version": "0.7.0-dev"
+            "version": "0.7.0"
         },
         "extensionKey": "jh_googlemaps",
         "name": "Google Maps",
@@ -327,7 +327,7 @@
         }
     ],
     "log": {
-        "last_modified": "2015-06-21 10:12",
+        "last_modified": "2015-06-21 11:31",
         "extension_builder_version": "6.2.0",
         "be_user": "Jonathan Heilmann (1)"
     }
