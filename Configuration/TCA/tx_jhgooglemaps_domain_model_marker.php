@@ -4,7 +4,29 @@ if (!defined ('TYPO3_MODE')) {
 }
 
 $GLOBALS['TCA']['tx_jhgooglemaps_domain_model_marker'] = array(
-	'ctrl' => $GLOBALS['TCA']['tx_jhgooglemaps_domain_model_marker']['ctrl'],
+	'ctrl' => array(
+        'title'	=> 'LLL:EXT:jh_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_jhgooglemaps_domain_model_marker',
+        'label' => 'title',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => TRUE,
+
+        'versioningWS' => 2,
+        'versioning_followPages' => TRUE,
+
+        'languageField' => 'sys_language_uid',
+        'transOrigPointerField' => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
+        'delete' => 'deleted',
+        'enablecolumns' => array(
+            'disabled' => 'hidden',
+            'starttime' => 'starttime',
+            'endtime' => 'endtime',
+        ),
+        'searchFields' => 'title,image,size,origin,anchor,shape_coords,shape_type,',
+        'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('jh_googlemaps') . 'Resources/Public/Icons/tx_jhgooglemaps_domain_model_marker.gif'
+    ),
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, image, size, origin, anchor, shape_coords, shape_type',
 	),
